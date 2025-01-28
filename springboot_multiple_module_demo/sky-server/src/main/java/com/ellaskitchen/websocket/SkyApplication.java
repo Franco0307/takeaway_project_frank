@@ -1,13 +1,13 @@
-package com.ellaskitchen.skypojo;
+package com.ellaskitchen.skyserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SkyPojoApplication {
+public class SkyApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SkyPojoApplication.class, args);
+		SpringApplication.run(SkyApplication.class, args);
 	}
 
 }
