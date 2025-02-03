@@ -4,9 +4,11 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
 @ApiModel("员工登陆时传递的数据模型")
-public class EmployeeLoginDTO {
+public class EmployeeLoginDTO implements Serializable {
 
     //员工姓名 为啥不用id ？
     @ApiModelProperty("用户名")

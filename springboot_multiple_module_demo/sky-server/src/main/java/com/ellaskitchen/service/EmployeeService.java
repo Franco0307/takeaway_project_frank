@@ -1,6 +1,7 @@
 package com.ellaskitchen.service;
 
 import com.ellaskitchen.dto.EmployeeDTO;
+import com.ellaskitchen.dto.EmployeeLoginDTO;
 import com.ellaskitchen.dto.EmployeePageQueryDTO;
 import com.ellaskitchen.dto.PasswordEditDTO;
 import com.ellaskitchen.entity.Employee;
@@ -13,7 +14,7 @@ public interface EmployeeService {
      * @param employeeLoginDTO
      * @return
      */
-    Employee login(EmployeeDTO employeeLoginDTO);
+    Employee login(EmployeeLoginDTO employeeLoginDTO);
 
     /**
      * 新增员工

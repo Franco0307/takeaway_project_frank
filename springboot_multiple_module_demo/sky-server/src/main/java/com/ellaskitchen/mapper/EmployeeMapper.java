@@ -18,7 +18,7 @@ public interface EmployeeMapper {
      */
 
     @Select("select * from employee where username = #{username}")
-    Employee getByUsername(@Param("username") String username);
+    Employee getByUsername( String username);
 
 
     /** post

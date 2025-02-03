@@ -2,9 +2,11 @@ package com.ellaskitchen.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class PasswordEditDTO {
-    private String
+public class PasswordEditDTO implements Serializable {
+
     //员工id
     private long id;
 
