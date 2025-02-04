@@ -4,6 +4,7 @@ package com.ellaskitchen.controller.admin;
 import com.ellaskitchen.properties.JwtProperties;
 import com.ellaskitchen.service.EmployeeService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Slf4j
-@RequestMapping
+@RequestMapping("admin/employee")
 @Api(tags = "员工相关接口")
 public class EmployeeController {
 
@@ -29,7 +30,10 @@ public class EmployeeController {
      * @param employeeLoginDTO
      * @return
      */
-    @PostMapping("/admin/login")
+    @ApiOperation("员工登陆")
+    @PostMapping("/login")
+    public
+
 
 
 

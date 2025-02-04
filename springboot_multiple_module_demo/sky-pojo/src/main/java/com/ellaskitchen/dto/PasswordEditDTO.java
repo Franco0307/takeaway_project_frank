@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class PasswordEditDTO implements Serializable {
 
     //员工id
-    private long id;
+    private long empId;
 
     //旧密码 password
     private String oldPassword;
