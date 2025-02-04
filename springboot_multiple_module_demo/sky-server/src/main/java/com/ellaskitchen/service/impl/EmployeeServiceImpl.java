@@ -46,6 +46,8 @@ public class EmployeeServiceImpl implements EmployeeService {
      * @param employeeLoginDTO
      * @return
      */
+    //为什么传入是DTO，返回是Entity？
+    //为什么不传入VO？ 封装之后传给前端
     @Override
     public Employee login(EmployeeLoginDTO employeeLoginDTO) {
         String username = employeeLoginDTO.getUsername();
