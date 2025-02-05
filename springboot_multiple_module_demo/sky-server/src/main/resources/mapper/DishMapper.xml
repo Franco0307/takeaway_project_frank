@@ -39,4 +39,13 @@
         </set>
     </update>
 
+    <select id="pageQuery" resultType="com.ellaskitchen.entity.DishVO">
+        select * from dish
+        <where>
+            <if test="name != null and name != ''">name like concat('%',#{name},'%')</if>
+        <if test="status != null"> status = #{status}</if>
+        <if test="categoryId != null">category_id = #{categoryId}</if>
+        </where>
+    </select>
+
 </mapper>

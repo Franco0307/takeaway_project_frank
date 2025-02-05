@@ -2,10 +2,15 @@ package com.ellaskitchen.mapper;
 
 import com.ellaskitchen.annotations.AutoFill;
 import com.ellaskitchen.dto.DishChangeStatusDTO;
+import com.ellaskitchen.dto.DishPageQueryDTO;
 import com.ellaskitchen.entity.Dish;
 import com.ellaskitchen.enumeration.OperationType;
+import com.ellaskitchen.vo.DishVO;
+import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 @Mapper
 public interface DishMapper {
@@ -21,9 +26,9 @@ public interface DishMapper {
 
     /**
      * 删除菜品
-     * @param id
+     * @param ids
      */
-    void deleteById(long id);
+    void deleteById(List<Long> ids);
 
     /**
      * 修改菜品
@@ -40,7 +45,8 @@ public interface DishMapper {
     /**
      * 菜品分页查询
      * @param dishPageQueryDTO
-     * @return
+     * @return dishVO
      */
+    Page<DishVO> pageQuery(DishPageQueryDTO dishPageQueryDTO);
 }
 
