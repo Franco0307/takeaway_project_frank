@@ -1,7 +1,9 @@
 package com.ellaskitchen.mapper;
 
+import com.ellaskitchen.dto.CategoryPageQueryDTO;
 import com.ellaskitchen.dto.CategoryUpdateStatusDTO;
 import com.ellaskitchen.entity.Category;
+import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -56,10 +58,14 @@ public interface CategoryMapper {
 
     List<Category> selectByType(Integer type);
 
-
-
-
-
-
+    /**
+     * 品类分页查询
+     * 管理员想查看所有菜品分类：
+     * 1. 选择 type=1（菜品分类）
+     * 2. 系统默认 page=1, pageSize=10
+     * 3. 页面就会显示第一页的10个菜品分类
+     * 4. 如果想找"川菜"，可以在搜索框输入"川"
+     */
+    Page<Category> pageQuery(CategoryPageQueryDTO categoryPageQueryDTO);
 
 }
