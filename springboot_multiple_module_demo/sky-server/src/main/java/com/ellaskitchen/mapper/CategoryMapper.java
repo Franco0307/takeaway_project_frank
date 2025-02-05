@@ -1,8 +1,10 @@
 package com.ellaskitchen.mapper;
 
+import com.ellaskitchen.annotations.AutoFill;
 import com.ellaskitchen.dto.CategoryPageQueryDTO;
 import com.ellaskitchen.dto.CategoryUpdateStatusDTO;
 import com.ellaskitchen.entity.Category;
+import com.ellaskitchen.enumeration.OperationType;
 import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.*;
 
@@ -38,7 +40,9 @@ public interface CategoryMapper {
 
     /**
      *修改category
+     * @oaram category
      */
+    @AutoFill(OperationType.UPDATE)
     void updateCategory(Category category);
 
     /**
@@ -50,13 +54,14 @@ public interface CategoryMapper {
 //                      @Param("updateTime") LocalDateTime updateTime,
 //                      @Param("id") Long id);
     //创建category
+    @AutoFill(OperationType.UPDATE)
     void updateStatus(CategoryUpdateStatusDTO categoryUpdateStatusDTO);
 
     /**
      * 分类查询：查询所有的菜品类 type：1 或者套餐类 type：2
      */
 
-    List<Category> selectByType(Integer type);
+    List<Category> gettByType(Integer type);
 
     /**
      * 品类分页查询
@@ -66,6 +71,7 @@ public interface CategoryMapper {
      * 3. 页面就会显示第一页的10个菜品分类
      * 4. 如果想找"川菜"，可以在搜索框输入"川"
      */
+
     Page<Category> pageQuery(CategoryPageQueryDTO categoryPageQueryDTO);
 
 }

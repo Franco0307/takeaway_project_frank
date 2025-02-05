@@ -61,6 +61,7 @@ public interface EmployeeMapper {
      * 员工更改密码
      * @param newPassword
      */
+    @AutoFill(OperationType.UPDATE)
     @Update("update employee set password = #{newPassword} where id = #{id}")
     void changePassword(String newPassword, long id);
 
