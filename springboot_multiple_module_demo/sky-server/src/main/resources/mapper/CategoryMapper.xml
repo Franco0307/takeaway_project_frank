@@ -25,6 +25,12 @@
         where id = #{categoryId}
     </update>
 
+    <select id="selectByType" resultType="com.ellaskitchen.entity.Category">
+        select * from category where status = 1
+        <if test="type != null"> type = #{type}</if>
+        order by sort asc, create_time desc
+    </select>
+
 
 
 

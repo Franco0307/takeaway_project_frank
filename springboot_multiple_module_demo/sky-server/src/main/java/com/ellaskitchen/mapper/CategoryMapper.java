@@ -4,6 +4,8 @@ import com.ellaskitchen.dto.CategoryUpdateStatusDTO;
 import com.ellaskitchen.entity.Category;
 import org.apache.ibatis.annotations.*;
 
+import java.util.List;
+
 @Mapper
 public interface CategoryMapper {
 
@@ -38,7 +40,7 @@ public interface CategoryMapper {
     void updateCategory(Category category);
 
     /**
-     * 菜品启用，禁用
+     * 分类启用，禁用
      * @param categoryUpdateStatusDTO
      */
 //    void changeStatus(@Param("status") Integer status,
@@ -47,6 +49,12 @@ public interface CategoryMapper {
 //                      @Param("id") Long id);
     //创建category
     void updateStatus(CategoryUpdateStatusDTO categoryUpdateStatusDTO);
+
+    /**
+     * 分类查询：查询所有的菜品类 type：1 或者套餐类 type：2
+     */
+
+    List<Category> selectByType(Integer type);
 
 
 

@@ -16,7 +16,7 @@ import java.util.Arrays;
 @Slf4j
 @EnableCaching
 @EnableScheduling
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+@SpringBootApplication
 public class SkyApplication {
 
 	public static void main(String[] args) {

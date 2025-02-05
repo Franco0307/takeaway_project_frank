@@ -28,27 +28,27 @@ import java.util.List;
 public class WebMvcConfiguration extends WebMvcConfigurationSupport {
 
 //    注入客户端，管理端jwt拦截器依赖
-    @Autowired
+    @Resource
     private JwtTokenAdminInterceptor jwtTokenAdminInterceptor;
 
-    @Autowired
+    @Resource
     private JwtTokenUserInterceptor jwtTokenUserInterceptor;
 
 //    注册自定义拦截器
-
-    protected void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(jwtTokenAdminInterceptor)
-                .addPathPatterns("/admin/**")
-                .excludePathPatterns("/admin/login");
-
-        registry.addInterceptor(jwtTokenUserInterceptor)
-                .addPathPatterns("/user/**")
-                .excludePathPatterns("/user/login")
-                .excludePathPatterns("/user/shop/status");
-
-
-
-    }
+//
+//    protected void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(jwtTokenAdminInterceptor)
+//                .addPathPatterns("/admin/**")
+//                .excludePathPatterns("/admin/login");
+//
+//        registry.addInterceptor(jwtTokenUserInterceptor)
+//                .addPathPatterns("/user/**")
+//                .excludePathPatterns("/user/login")
+//                .excludePathPatterns("/user/shop/status");
+//
+//
+//
+//    }
 
 
     /**
