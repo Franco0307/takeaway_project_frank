@@ -9,7 +9,7 @@ import com.github.pagehelper.Page;
 import java.util.List;
 
 public interface CategoryService {
-    void save(Category category);
+
 
     /**
      * 新增品类
@@ -32,9 +32,9 @@ public interface CategoryService {
 
     /**
      * 修改category
-     * @Param category
+     * @Param categoryDTO
      */
-    public void updateCategory(Category category);
+    public void updateCategory(CategoryDTO categoryDTO);
 
     /**
      * 分类启用禁用

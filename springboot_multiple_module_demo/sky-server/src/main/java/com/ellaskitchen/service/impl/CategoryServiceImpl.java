@@ -7,6 +7,7 @@ import com.ellaskitchen.entity.Category;
 import com.ellaskitchen.mapper.CategoryMapper;
 import com.ellaskitchen.service.CategoryService;
 import com.github.pagehelper.Page;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,30 +21,24 @@ public class CategoryServiceImpl implements CategoryService {
     /**
      * 新增品类
      *
-     * @param category
-     */
-    @Override
-    public void save(Category category) {
-
-    }
-
-    /**
-     * 新增品类
-     *
      * @param categoryDTO
      */
     @Override
     public void save(CategoryDTO categoryDTO) {
-
+        Category category = new Category();
+        BeanUtils.copyProperties(categoryDTO,category);
+        category.setStatus(0);
+        categoryMapper.insert(category);
     }
+
 
     /**
      * 根据id删除品类
-     *
      * @param id
      */
     @Override
     public void delete(long id) {
+
 
     }
 
@@ -61,11 +56,10 @@ public class CategoryServiceImpl implements CategoryService {
     /**
      * 修改category
      *
-     * @param category
-     * @Param category
+     * @param categoryDTO
      */
     @Override
-    public void updateCategory(Category category) {
+    public void updateCategory(CategoryDTO categoryDTO) {
 
     }
 

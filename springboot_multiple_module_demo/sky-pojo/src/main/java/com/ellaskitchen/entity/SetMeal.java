@@ -39,6 +39,7 @@ public class SetMeal implements Serializable {
 
     //图片
     private String image;
+    //以下为公用字段
 
     private LocalDateTime createTime;
 
