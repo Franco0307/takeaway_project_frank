@@ -9,6 +9,7 @@ import com.ellaskitchen.vo.DishVO;
 import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -48,5 +49,12 @@ public interface DishMapper {
      * @return dishVO
      */
     Page<DishVO> pageQuery(DishPageQueryDTO dishPageQueryDTO);
+
+    /**
+     * 根据菜品分类id查询菜品数量
+     * @categoryId
+     * @return
+     */
+    Integer countByCategoryId(@Param("categoryId")Long categoryId);
 }
 

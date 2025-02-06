@@ -62,6 +62,12 @@
         order by s.create_time desc
     </select>
 
+    <select id="countByCategoryId" resultType="java.lang.Integer">
+        select count(id)
+        from setmeal
+        where category_id = #{categoryId}
+    </select>
+
 
 
 

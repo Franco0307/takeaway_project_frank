@@ -51,5 +51,12 @@ public interface SetMealMapper {
      */
     Page<SetMealVO> pageQuery(SetMealPageQueryDTO setMealPageQueryDTO);
 
+    /**
+     * 查询当前目录id下的套餐
+     * @categoryId
+     * @return
+     */
+    Integer countByCategoryId(long categoryId);
+
 
 }

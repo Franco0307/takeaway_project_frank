@@ -4,6 +4,7 @@ import com.ellaskitchen.dto.CategoryDTO;
 import com.ellaskitchen.dto.CategoryPageQueryDTO;
 import com.ellaskitchen.dto.CategoryUpdateStatusDTO;
 import com.ellaskitchen.entity.Category;
+import com.ellaskitchen.result.PageResult;
 import com.github.pagehelper.Page;
 
 import java.util.List;
@@ -23,12 +24,7 @@ public interface CategoryService {
      */
     public void delete(long id);
 
-    /**
-     *根据id查询category
-     * @param id
-     * @return
-     */
-    public Category getById(long id);
+
 
     /**
      * 修改category
@@ -54,7 +50,7 @@ public interface CategoryService {
      * @param categoryPageQueryDTO
      * @return
      */
-    public Page<Category> pageQuery(CategoryPageQueryDTO categoryPageQueryDTO);
+    public PageResult pageQuery(CategoryPageQueryDTO categoryPageQueryDTO);
 
 
 }
