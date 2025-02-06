@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 @Data
 @Builder
@@ -22,6 +23,6 @@ public class DishFlavor implements Serializable {
     private String name;
 
     //口味数据list
-    private String value;
+    private String  value;
 
 }
