@@ -13,7 +13,7 @@ public interface FlavorMapper {
      */
     void saveFlavors(List<DishFlavor> dishFlavors);
 
-    //根据id菜品查询口味,可能返回很多口味
+
     /**
      * * @param dishId
      * @return
