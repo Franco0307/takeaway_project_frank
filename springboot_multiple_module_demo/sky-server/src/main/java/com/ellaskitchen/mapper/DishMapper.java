@@ -60,7 +60,7 @@ public interface DishMapper {
     void update(Dish dish);
 
     /**
-     * 根据分类id查询菜品
+     * 根据条件查询菜品
      * @param dish
      * @return
      */

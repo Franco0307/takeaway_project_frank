@@ -31,7 +31,7 @@
     </select>
 
     <!--    菜品分页查询-->
-    <select id="pageQuery" resultType="com.sky.vo.DishVO">
+    <select id="pageQuery" resultType="com.ellaskitchen.vo.DishVO">
         select d.*,c.name as categoryName
         from dish d left join category c on d.category_id = c.id
         <where>
@@ -49,13 +49,13 @@
     </select>
 
     <!--    获取菜品-->
-    <select id="getById" resultType="com.sky.entity.Dish">
+    <select id="getById" resultType="com.ellaskitchen.entity.Dish">
         select *
         from dish where id=#{id};
     </select>
 
-    <!--    根据分类id查询菜品-->
-    <select id="list" resultType="com.sky.entity.Dish">
+    <!--    根据条件查询菜品-->
+    <select id="list" resultType="com.ellaskitchen.entity.Dish">
         select *
         from dish
         <where>

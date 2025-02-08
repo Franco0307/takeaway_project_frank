@@ -16,6 +16,8 @@ import java.util.List;
 @Mapper
 public interface SetMealMapper {
 
+
+
     /**
      * 新增套餐
      * @param setMeal
@@ -57,6 +59,11 @@ public interface SetMealMapper {
      * @return
      */
     Integer countByCategoryId(long categoryId);
+
+    /**
+     * 返回SetMeal
+     */
+    SetMeal getById(long id);
 
 
 }
