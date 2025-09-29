@@ -1,0 +1,45 @@
+## Module Description for the Project:
+| **No.** | **Name**     | **Description**                                                     |
+| -------- | ------------ | ------------------------------------------------------------ |
+| 1        | sky-take-out | Maven parent project, manages dependency versions uniformly and aggregates other sub-modules                |
+| 2        | sky-common   | Sub-module containing common classes such as utility classes, constant classes, exception classes, etc.           |
+| 3        | sky-pojo     | Sub-module containing entity classes, VOs, DTOs, etc.                                |
+| 4        | sky-server   | Sub-module for backend services, containing configuration files, Controllers, Services, Mappers, etc. |
+
+After understanding the overall project structure, let's analyze each sub-module in detail:
+
+- **sky-common:** This module contains common classes that can be used by other modules
+
+  Analysis of each package in the sky-common module:
+  | Name        | Description                           |
+  | ----------- | ------------------------------ |
+  | constant    | Stores related constant classes                 |
+  | context     | Stores context classes                   |
+  | enumeration | Storage for project enumeration classes               |
+  | exception   | Stores custom exception classes               |
+  | json        | Classes for handling JSON conversion               |
+  | properties  | Stores SpringBoot related configuration property classes |
+  | result      | Encapsulation of return result classes               |
+  | utils       | Common utility classes                     |
+  
+- **sky-pojo:** This module contains entities, DTOs, and VOs
+
+  Analysis of each package in the sky-pojo module:
+  | **Name** | **Description**                                     |
+  | -------- | -------------------------------------------- |
+  | Entity   | Entities, usually corresponding to database tables                 |
+  | DTO      | Data Transfer Objects, typically used for data transfer between program layers |
+  | VO       | View Objects, objects provided for frontend data display           |
+  | POJO     | Plain Old Java Objects, containing only properties and corresponding getters and setters |
+  
+- **sky-server:** This module contains configuration files, configuration classes, interceptors, controllers, services, mappers, startup classes, etc.
+
+  Analysis of each package in the sky-server module:
+  | Name           | Description             |
+  | -------------- | ---------------- |
+  | config         | Stores configuration classes       |
+  | controller     | Stores controller classes |
+  | interceptor    | Stores interceptor classes     |
+  | mapper         | Stores mapper interfaces   |
+  | service        | Stores service classes    |
+  | SkyApplication | Startup class           |
